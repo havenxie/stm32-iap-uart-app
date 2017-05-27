@@ -24,7 +24,7 @@ const u8 TEXT_Buffer[]={"STM32 FLASH TEST"};
 
 	u16 clearFlag = 0x0000;//app run state
 	NVIC_SetVectorTable(0X8000000, 0X3000);//设置中断向量表
-	STMFLASH_Write(0x8002800, &clearFlag, 1);//清除IAP升级标志
+	STMFLASH_Write(IAP_FLASH_FLAG_ADDR, &clearFlag, 1);//清除IAP升级标志
 	 
 	delay_init();	    	 //延时函数初始化	  
 	NVIC_Configuration(); 	 //设置NVIC中断分组2:2位抢占优先级，2位响应优先级

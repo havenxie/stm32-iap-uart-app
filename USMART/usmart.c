@@ -72,7 +72,7 @@ u8 *sys_cmd_tab[]=
 	"dec",
 	"runtime",
 	"reset",
-	"download",//下载固件
+	"update",//下载固件
 	"upload",//上传固件
 	"erase",//擦除除了Bootloader之外的flash区域
 };	    
@@ -80,7 +80,7 @@ u8 *sys_cmd_tab[]=
 //0,成功处理;其他,错误代码;
 u8 usmart_sys_cmd_exe(u8 *str)
 {
-	u16 temp = 0xAAAA;
+	//u16 temp = 0xAAAA;
 	u8 i;
 	u8 sfname[MAX_FNAME_LEN];//存放本地函数名
 	u8 pnum;
@@ -112,7 +112,7 @@ u8 usmart_sys_cmd_exe(u8 *str)
 			printf("dec:    参数10进制显示,后跟空格+数字即执行进制转换\r\n\n");
 			printf("runtime:1,开启函数运行计时;0,关闭函数运行计时;\r\n\n");
 			printf("reset:  使设备软件复位\r\n");
-			printf("download:通过BootLoader下载固件\r\n");
+			printf("update:  通过BootLoader下载固件\r\n");
 			printf("upload:  通过BootLoader上传固件\r\n");
 			printf("erase:   擦除除Bootloader之外的Flash区域\r\n");
 			printf("请按照程序编写格式输入函数名及参数并以回车键结束.\r\n");    
@@ -196,13 +196,12 @@ u8 usmart_sys_cmd_exe(u8 *str)
 			break;	
 		case 7://system software reset
 			printf("\r\n");
-			NVIC_SetVectorTable(0X8000000, 0X0000);//设置中断向量表
+			//NVIC_SetVectorTable(0X8000000, 0X0000);//设置中断向量表
 			NVIC_SystemReset();
 			break;
 		case 8://download by bootloader
 			printf("\r\n");
 			IAP_FLASH_WriteFlag(DOWNLOAD_FLAG_DATA);
-			temp = IAP_FLASH_ReadFlag();//读取2个字节.
 			NVIC_SystemReset();
 			break;
 		case 9://upload by bootloader
