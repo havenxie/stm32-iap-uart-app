@@ -113,6 +113,7 @@ void Test_Write(u32 WriteAddr,u16 WriteData)
 {
 	STMFLASH_Write(WriteAddr,&WriteData,1);//Ð´ÈëÒ»¸ö×Ö 
 }
+
 #ifndef IAP_FLASH_FLAG_ADDR
 #define IAP_FLASH_FLAG_ADDR 0x8002800
 #endif
@@ -128,7 +129,6 @@ uint16_t IAP_FLASH_ReadFlag(void)
 {
 	return STMFLASH_ReadHalfWord(IAP_FLASH_FLAG_ADDR);   
 }
-
 
 
 

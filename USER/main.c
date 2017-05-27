@@ -16,26 +16,25 @@ const u8 TEXT_Buffer[]={"STM32 FLASH TEST"};
 #define SIZE sizeof(TEXT_Buffer)	 			  	//数组长度
 #define FLASH_SAVE_ADDR  0X08070000 				//设置FLASH 保存地址(必须为偶数)
 
-
  int main(void)
  {	 
 	u8 key;
 	u16 i=0;
 	u8 datatemp[SIZE];
-	 
+
 	u16 clearFlag = 0x0000;//app run state
 	NVIC_SetVectorTable(0X8000000, 0X3000);//设置中断向量表
-	STMFLASH_Write(IAP_FLASH_FLAG_ADDR, &clearFlag, 1);//清除IAP升级标志
+	STMFLASH_Write(0x8002800, &clearFlag, 1);//清除IAP升级标志
 	 
 	delay_init();	    	 //延时函数初始化	  
 	NVIC_Configuration(); 	 //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
-	uart_init(115200);	 	//串口初始化为115200
-	usmart_dev.init(SystemCoreClock/1000000);	//初始化USMART
-	 
+	uart_init(115200);	 	//串口初始化为9600
  	LED_Init();			     //LED端口初始化
 	LCD_Init();	         //初始化LCD
 	KEY_Init();	 		 //初始化KEY
 		
+	usmart_dev.init(SystemCoreClock/1000000);	//初始化USMART
+	 
  	POINT_COLOR=RED;//设置字体为红色 
 	LCD_ShowString(60,50,200,16,16,"WarShip STM32");	
 	LCD_ShowString(60,70,200,16,16,"FLASH EEPROM TEST");	
