@@ -87,7 +87,7 @@ void help_cmd(void)
 			printf("通过USMART你可以使用串口助手调用固件里面的任何函数,并执行.\r\n");
 			printf("你可以随意更改函数的输入参数(支持数字(10/16进制)、字符串、函数入\r\n");	  
 			printf("口地址等作为参数),单个函数最多支持10个输入参数,并支持函数返回值显示.\r\n\n");
-			printf("USMART有10个系统命令(后3个主要有BootLoader支持):\r\n");
+			printf("USMART有12个系统命令(后5个主要由BootLoader和App共同支持):\r\n");
 			printf("?:      获取帮助信息\r\n");
 			printf("help:   获取帮助信息\r\n");
 			printf("list:   可用的函数列表\r\n\n");
