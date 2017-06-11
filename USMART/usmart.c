@@ -83,7 +83,7 @@ void help_cmd(void)
 {
 	printf("\r\n");
 #if USMART_USE_HELP
-			printf("------------------------USMART V 0.1.0---------------------- \r\n\n");
+			printf("------------------------USMART V 0.1.4---------------------- \r\n\n");
 			printf("通过USMART你可以使用串口助手调用固件里面的任何函数,并执行.\r\n");
 			printf("你可以随意更改函数的输入参数(支持数字(10/16进制)、字符串、函数入\r\n");	  
 			printf("口地址等作为参数),单个函数最多支持10个输入参数,并支持函数返回值显示.\r\n\n");
@@ -202,32 +202,26 @@ u8 usmart_sys_cmd_exe(u8 *str)
 			printf("\r\n"); 
 			break;	
 		case 7://system software reset
-			printf("\r\n");
 			//NVIC_SetVectorTable(0X8000000, 0X0000);//设置中断向量表
 			NVIC_SystemReset();
 			break;
 		case 8://download by bootloader
-			printf("\r\n");
 			IAP_FLASH_WriteFlag(DOWNLOAD_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 9://upload by bootloader
-			printf("\r\n");
 			IAP_FLASH_WriteFlag(UPLOAD_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 10://Erase areas other than bootloader
-			printf("\r\n");
 			IAP_FLASH_WriteFlag(ERASE_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 11://Iap Menu 
-			printf("\r\n");
 			IAP_FLASH_WriteFlag(INIT_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 12://run app
-			printf("\r\n");
 			IAP_FLASH_WriteFlag(APPRUN_FLAG_DATA);
 			NVIC_SystemReset();
 		default://非法指令
@@ -450,17 +444,17 @@ void usmart_scan(void)
 				switch(sta)
 				{
 					case USMART_FUNCERR:
-						printf("函数错误!\r\n");
-						printf("输入:help查询\r\n");					
+						printf(" 函数错误!\r\n");
+						printf(" 输入:help查询\r\n");					
 						break;	
 					case USMART_PARMERR:
-						printf("参数错误!\r\n");   			
+						printf(" 参数错误!\r\n");   			
 						break;				
 					case USMART_PARMOVER:
-						printf("参数太多!\r\n");   			
+						printf(" 参数太多!\r\n");   			
 						break;		
 					case USMART_NOFUNCFIND:
-						printf("未找到匹配的函数!\r\n");   			
+						printf(" 未找到匹配的函数!\r\n");   			
 						break;	
 					default:
 						break;

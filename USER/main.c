@@ -19,13 +19,8 @@ int main(void)
  	LED_Init();			     //LED端口初始化
 	LCD_Init();	             //初始化LCD
 	usmart_dev.init(SystemCoreClock/1000000);	//初始化USMART
-	 
- 	POINT_COLOR=RED;         //设置字体为红色 
-	LCD_ShowString(60,50,200,16,16,"STM32-IAP-APP");	
-	LCD_ShowString(60,90,200,16,16,"Haven Xie");
-	LCD_ShowString(60,110,200,16,16,"2017/6/4");  
-	 
-    printf("输入:help查询指令\r\n");	
+	   
+    printf("\r\n 输入:help查询指令\r\n");	
 	while(1)
 	{
 		i++;
