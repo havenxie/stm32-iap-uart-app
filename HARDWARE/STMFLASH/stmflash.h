@@ -30,8 +30,6 @@ void STMFLASH_WriteLenByte(u32 WriteAddr,u32 DataToWrite,u16 Len);	//Ö¸¶¨µØÖ·¿ªÊ
 u32 STMFLASH_ReadLenByte(u32 ReadAddr,u16 Len);						//Ö¸¶¨µØÖ·¿ªÊ¼¶ÁÈ¡Ö¸¶¨³¤¶ÈÊı¾İ
 void STMFLASH_Write(u32 WriteAddr,u16 *pBuffer,u16 NumToWrite);		//´ÓÖ¸¶¨µØÖ·¿ªÊ¼Ğ´ÈëÖ¸¶¨³¤¶ÈµÄÊı¾İ
 void STMFLASH_Read(u32 ReadAddr,u16 *pBuffer,u16 NumToRead);   		//´ÓÖ¸¶¨µØÖ·¿ªÊ¼¶Á³öÖ¸¶¨³¤¶ÈµÄÊı¾İ
-void IAP_FLASH_WriteFlag(u16 flag);
-uint16_t IAP_FLASH_ReadFlag(void);
 //²âÊÔĞ´Èë
 void Test_Write(u32 WriteAddr,u16 WriteData);								   
 #endif
