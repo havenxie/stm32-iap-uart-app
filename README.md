@@ -1,4 +1,3 @@
-**
 
 ## STM32串口IAP的Application部分使用说明
 
