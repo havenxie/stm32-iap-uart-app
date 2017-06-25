@@ -16,7 +16,7 @@ int main(void)
 	NVIC_Configuration(); 	 //设置NVIC中断分组2:2位抢占优先级，2位响应优先级
 	uart_init(115200);	 	 //串口初始化为9600
  	LED_Init();			     //LED端口初始化
-	//LCD_Init();	             //初始化LCD
+	LCD_Init();	             //初始化LCD
 	usmart_dev.init(SystemCoreClock/1000000);	//初始化USMART
 	   
     printf("\r\n 输入:help查询指令\r\n");	

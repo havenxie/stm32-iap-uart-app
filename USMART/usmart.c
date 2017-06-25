@@ -206,7 +206,7 @@ u8 usmart_sys_cmd_exe(u8 *str)
 			NVIC_SystemReset();
 			break;
 		case 8://download by bootloader
-			IAP_FLASH_WriteFlag(DOWNLOAD_FLAG_DATA);
+			IAP_FLASH_WriteFlag(UPDATE_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 9://upload by bootloader
