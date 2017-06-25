@@ -244,9 +244,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>1</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>5</TopLine>
+      <TopLine>6</TopLine>
       <CurrentLine>19</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
@@ -423,9 +423,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>11</ColumnNumber>
+      <ColumnNumber>14</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2</TopLine>
+      <TopLine>3</TopLine>
       <CurrentLine>6</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\SYSTEM\iap\iap.c</PathWithFileName>
@@ -607,9 +607,9 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>203</TopLine>
+      <TopLine>204</TopLine>
       <CurrentLine>216</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\USMART\usmart.c</PathWithFileName>
@@ -625,7 +625,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>27</TopLine>
+      <TopLine>28</TopLine>
       <CurrentLine>41</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\USMART\usmart_config.c</PathWithFileName>
