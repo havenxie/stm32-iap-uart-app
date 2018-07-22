@@ -19,7 +19,7 @@ int main(void)
 	LCD_Init();	             //初始化LCD
 	usmart_dev.init(SystemCoreClock/1000000);	//初始化USMART
 	   
-    printf("\r\n 输入:help查询指令\r\n");	
+	printf("\r\n 输入:help查询指令\r\n");	
 	while(1)
 	{
 		i++;
