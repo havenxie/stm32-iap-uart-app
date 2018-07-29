@@ -23,8 +23,8 @@ int main(void)
 	while(1)
 	{
 		i++;
-		delay_ms(10);  
-		if(i==20)
+		delay_ms(50);  
+		if(i==10)
 		{
 			LED0=!LED0;//提示系统正在运行	
 			i=0;
