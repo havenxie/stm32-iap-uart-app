@@ -3,7 +3,6 @@
 #include "sys.h"
 #include "lcd.h"
 #include "usart.h"	 
-#include "stmflash.h"
 #include "usmart.h"
 #include "iap.h"
 

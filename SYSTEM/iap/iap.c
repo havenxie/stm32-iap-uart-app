@@ -17,7 +17,7 @@ void IAP_Init(void)
 {
 	u16 clearFlag = 0x0000;  //标志为运行状态
 	IAP_FLASH_WriteFlag( clearFlag );//清除IAP升级标志
-	NVIC_SetVectorTable(ApplicationAddress, IAP_FLASH_SIZE);//设置中断向量表
+	NVIC_SetVectorTable(STM32_FLASH_BASE, IAP_FLASH_SIZE);//设置中断向量表
 }
 
 void IAP_Handle(u8 * cmd)

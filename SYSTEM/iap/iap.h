@@ -10,7 +10,7 @@
 
 #define IAP_FLASH_SIZE  0x3000//Bootloader区域大小
 #define IAP_FLASH_FLAG_ADDR  0x8002800//标志数据存放地址，存放在Bootloader区域内
-#define ApplicationAddress  0x8003000//应用程序地址
+#define ApplicationAddress  (FLASH_BASE + IAP_FLASH_SIZE)//应用程序地址
 
 void IAP_FLASH_WriteFlag(u16 flag);
 u32 IAP_FLASH_ReadFlag(void);
