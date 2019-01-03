@@ -206,23 +206,23 @@ u8 usmart_sys_cmd_exe(u8 *str)
 			NVIC_SystemReset();
 			break;
 		case 8://download by bootloader
-			IAP_FLASH_WriteFlag(UPDATE_FLAG_DATA);
+			IAP_WriteFlag(UPDATE_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 9://upload by bootloader
-			IAP_FLASH_WriteFlag(UPLOAD_FLAG_DATA);
+			IAP_WriteFlag(UPLOAD_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 10://Erase areas other than bootloader
-			IAP_FLASH_WriteFlag(ERASE_FLAG_DATA);
+			IAP_WriteFlag(ERASE_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 11://Iap Menu 
-			IAP_FLASH_WriteFlag(INIT_FLAG_DATA);
+			IAP_WriteFlag(INIT_FLAG_DATA);
 			NVIC_SystemReset();
 			break;
 		case 12://run app
-			IAP_FLASH_WriteFlag(APPRUN_FLAG_DATA);
+			IAP_WriteFlag(APPRUN_FLAG_DATA);
 			NVIC_SystemReset();
 		default://∑«∑®÷∏¡Ó
 			return USMART_FUNCERR;
